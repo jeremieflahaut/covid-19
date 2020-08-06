@@ -1,0 +1,18 @@
+html {
+    overflow-y: auto!important;
+}
+
+#app {
+    main {
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    a.v-list-item {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+}
