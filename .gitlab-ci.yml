@@ -1,33 +1,32 @@
 stages:
-    - Run:Test
+  - Run:Test
 
 
 Run:Test:
-    image: jflahaut/php-fpm:latest
-    services:
-        - mysql:latest
-    cache:
+  image: jflahaut/php-fpm:latest
+  services:
+    - mysql:latest
+  cache:
     paths:
-        - vendor/
-        - node_modules/
-    before_script:
-        - composer install
+      - vendor/
+  before_script:
+    - composer install
 
-        # Copy over testing configuration.
-        # Don't forget to set the database config in .env.testing correctly
-        # DB_HOST=mysql
-        # DB_DATABASE=project_name
-        # DB_USERNAME=root
-        # DB_PASSWORD=secret
-        - cp .env.example .env
-     
-        - php artisan key:generate
-        - php artisan config:cache
-     
+    # Copy over testing configuration.
+    # Don't forget to set the database config in .env.testing correctly
+    # DB_HOST=mysql
+    # DB_DATABASE=project_name
+    # DB_USERNAME=root
+    # DB_PASSWORD=secret
+    - cp .env.example .env
+  
+    - php artisan key:generate
+    - php artisan config:cache
+    
 
-    script:
-        # run laravel tests
-        - php vendor/bin/phpunit --coverage-text --colors=never
+  script:
+    # run laravel tests
+    - php vendor/bin/phpunit --coverage-text --colors=never
      
 
 
