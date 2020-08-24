@@ -11,11 +11,15 @@
                 <div>
                     <v-btn @click.stop="dialog = true" text x-small>Mentions légales</v-btn>
                 </div>
-                <v-dialog v-model="dialog" max-width="290">
+                <v-dialog v-model="dialog" max-width="600">
                     <v-card>
                         <v-card-title class="headline">Mentions légales</v-card-title>
                         <v-card-text>
-                            Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+                            <div class="text--primary">Site hébergé par :</div>
+                            <p class="text-center">OVH <br />
+                            2 rue Kellermann<br />
+                            59100 Roubaix<br />
+                            France</p>
                         </v-card-text>
                     </v-card>
                 </v-dialog>
