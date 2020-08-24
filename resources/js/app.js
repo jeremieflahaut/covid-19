@@ -1,6 +1,7 @@
 import Vuetify from 'vuetify';
 import vuetify from './plugins/vuetify/vuetify'
 import router from './router';
+import VueGtag from 'vue-gtag';
 
 
 /**
@@ -33,6 +34,13 @@ Vue.prototype.$http = base;
 const Bus = require('./plugins/bus/plugin')
 Vue.use(Bus.default)
 
+/**
+ * Google analytics
+ */
+
+Vue.use(VueGtag, {
+	config: {id: process.env.MIX_GOOGLE_ANALYTICS_ID}
+}, router);
 
 /**
  * The following block of code may be used to automatically register your

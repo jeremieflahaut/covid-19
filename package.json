@@ -18,7 +18,7 @@
         "browser-sync-webpack-plugin": "^2.2.2",
         "cross-env": "^7.0",
         "jquery": "^3.2",
-        "laravel-mix": "^5.0.1",
+        "laravel-mix": "^5.0.5",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
@@ -31,6 +31,7 @@
         "chart.js": "^2.9.3",
         "vue": "^2.6.11",
         "vue-chartjs": "^3.5.0",
+        "vue-gtag": "^1.8.0",
         "vue-router": "^3.3.4",
         "vuetify": "^2.3.4"
     }
